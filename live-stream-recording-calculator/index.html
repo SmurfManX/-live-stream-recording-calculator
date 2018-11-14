@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Live Stream Recording Calculator</title>
+  <link rel="icon" href="img/calculator.png">
+
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <body ng-app="bmrApp">
+  <div class="container">
+    <div class="jumbotron" ng-controller="headerCtrl">
+      <h1 class="main-header">{{header}}</h1>
+      <hr>
+      <br>
+      <form ng-controller="mainCtrl">
+        <h3>Channel (Cnt) </h3><input ng-change="computeBMR()" ng-model="stats.bitrate"></input>
+        <br>
+        <br>
+        <h3>Bitrates (Mb/s)</h3><input ng-change="computeBMR()" ng-model="stats.channels"></input>
+        <br>
+        <br>
+        <h3>Recording (H) </h3><input ng-change="computeBMR()" ng-model="stats.recorging"></input>
+        <br>
+        <br>
+        <b>Storage Space GB</b>
+        <br>
+        <h3 class="result">{{stats.space}}</h3>
+        <br>
+        <b>Storage Space GB + 40%</b>
+        <br>
+        <h3 class="result">{{stats.spaceplus}}</h3>
+        <br>
+      </form>
+      </div>
+    </div>
+</body>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
