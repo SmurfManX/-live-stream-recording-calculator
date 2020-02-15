@@ -1,2 +1,2 @@
-# -live-stream-recording-calculator
+# live-stream-recording-calculator
 Live Stream Recording Calculator 
